@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Pomodoro</title>
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <header class="title">Pomodoro Timer</header>
+        <!-- Timer Section -->
+        <div id="timer"></div>
+        <!-- Timer End -->
+        <!-- Control Buttons Section -->
+        <div class="control">
+          <button id="run" onclick="paused()">Start</button>
+          <button id="reset" onclick="resetBtn()">Reset</button>
+        </div>
+        <!-- End Buttons section -->
+        <div class="panels">
+          <div class="box">
+            <h3>Pomodoro</h3>
+            <span id="pomtime"></span><span>:</span><span>00</span>
+            <div class="buttons">
+              <img
+                src="./logos/negative.png"
+                onclick="pomCalculatorNegative()"
+              />
+              <img src="./logos/plus.png" onclick="pomCalculatorPlus()" />
+            </div>
+          </div>
+          <div class="box">
+            <h3>Short</h3>
+            <span id="shorttime"></span><span>:</span><span>00</span>
+            <div class="buttons">
+              <img
+                src="./logos/negative.png"
+                onclick="shortCalculatorNegative()"
+              />
+              <img src="./logos/plus.png" onclick="shortCalculatorPlus()" />
+            </div>
+          </div>
+          <div class="box">
+            <h3>Long</h3>
+            <span id="longtime"></span><span>:</span><span>00</span>
+            <div class="buttons">
+              <img
+                src="./logos/negative.png"
+                onclick="longCalculatorNegative()"
+              />
+              <img src="./logos/plus.png" onclick="longCalculatorPlus()" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="./pomodoro.js"></script>
+  </body>
+</html>
